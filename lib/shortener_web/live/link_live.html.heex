@@ -1,26 +1,51 @@
 <div>
-    <h1>Link Stats</h1>
+    <h1 class="my-6 text-3xl font-bold underline">Link Stats</h1>
 
     <ul>
 
         <li>
-            <h4>Shortened url</h4>
-            <input class="copy-field" value={"#{@domain}/#{@link.id}"} disabled />
+            <label for="shortened" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shortened URL</label>
+            <input
+                type="text"
+                id="disabled shortened"
+                aria-label="disabled shortened"
+                class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                value={"#{@domain}/#{@link.id}"}
+                disabled
+            >
             <br>
         </li>
 
         <li>
-            <h4>Original url</h4>
-            <%= @link.url %>
+            <label for="original" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Original URL</label>
+            <input
+                type="text"
+                id="disabled original"
+                aria-label="disabled original"
+                class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                value={@link.url}
+                disabled
+            >
+            <br>
         </li>
 
-        <li>
-            <h4>Visits</h4>
-            <%= @realtime_visits %>
-        </li>
+        <label for="visits" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Visits</label>
+        <input
+            type="text"
+            id="visits"
+            aria-label="disabled visits"
+            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            value={@realtime_visits}
+            disabled
+        >
+        <br>
 
-        <%= link("Create another!", to: "/") %>
+        <br>
 
+        <a href="/" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Create another
+            <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
     </ul>
 
 </div>

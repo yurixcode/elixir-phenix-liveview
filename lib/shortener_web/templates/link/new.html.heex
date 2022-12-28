@@ -1,5 +1,3 @@
-<h1>New Link</h1>
+<h1 class="my-6">Shorten a new link</h1>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.link_path(@conn, :create)) %>
-
-<span><%= link "Back", to: Routes.link_path(@conn, :new) %></span>
