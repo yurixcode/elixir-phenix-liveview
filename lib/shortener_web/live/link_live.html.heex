@@ -1,0 +1,26 @@
+<div>
+    <h1>Link Stats</h1>
+
+    <ul>
+
+        <li>
+            <h4>Shortened url</h4>
+            <input class="copy-field" value={"#{@domain}/#{@link.id}"} disabled />
+            <br>
+        </li>
+
+        <li>
+            <h4>Original url</h4>
+            <%= @link.url %>
+        </li>
+
+        <li>
+            <h4>Visits</h4>
+            <%= @realtime_visits %>
+        </li>
+
+        <%= link("Create another!", to: "/") %>
+
+    </ul>
+
+</div>

@@ -17,3 +17,16 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+
+# Url Shortener
+
+To fire up the project:
+
+```
+$ docker-compose build
+$ docker-compose run web mix ecto.create
+$ docker-compose up
+```
+
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

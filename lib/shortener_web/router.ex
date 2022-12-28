@@ -17,7 +17,10 @@ defmodule ShortenerWeb.Router do
   scope "/", ShortenerWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", LinkController, :new
+    post "/links", LinkController, :create
+    get "/:id", LinkController, :redirect_to
+    live "/:id/stats", LinkLive, :show
   end
 
   # Other scopes may use custom stacks.
